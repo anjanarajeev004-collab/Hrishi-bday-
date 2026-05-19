@@ -536,5 +536,105 @@ body{
         translateY(0);
 
         opacity:1;
+    }@media(max-width:768px){
+
+    .main-img,
+    .center-photo,
+    .final-photo{
+
+        width:220px;
+        height:300px;
     }
+
+    .content h1{
+
+        font-size:32px;
+    }
+
+    .text-box h2,
+    .final-text h2{
+
+        font-size:28px;
+    }
+
+    .text-box p,
+    .bottom-text,
+    .final-text p{
+
+        font-size:17px;
+        line-height:1.6;
+    }
+
+    .centre-main,
+    .family-main{
+
+        width:180px;
+        height:240px;
+    }
+
+    .friend,
+    .child{
+
+        width:80px;
+        height:110px;
+    }
+
+    /* PAGE 3 MOBILE */
+
+    .f1{ top:24%; left:18%; }
+    .f2{ top:24%; right:18%; }
+
+    .f3{ top:42%; left:5%; }
+    .f4{ top:42%; right:5%; }
+
+    .f5{ bottom:24%; left:18%; }
+    .f6{ bottom:24%; right:18%; }
+
+    /* PAGE 4 MOBILE */
+
+    .c1{ top:22%; left:18%; }
+    .c2{ top:22%; right:18%; }
+
+    .c3{ top:42%; left:3%; }
+    .c4{ top:42%; right:3%; }
+
+    .c5{ bottom:22%; left:18%; }
+    .c6{ bottom:22%; right:18%; }
+
+    .c7{
+        bottom:10%;
+    }
+
+    /* HEARTS */
+
+    .heart-balloon{
+
+        width:140px;
+        height:140px;
+    }
+
+    .heart-balloon::after{
+
+        height:70px;
+    }
+
+    .b1{ left:-8%; top:8%; }
+    .b2{ left:2%; top:70%; }
+
+    .b3{ right:-8%; top:8%; }
+    .b4{ right:2%; top:65%; }
+
+    .b5{ left:35%; top:0%; }
+    .b6{ left:33%; top:76%; }
+
+    .b7{ left:62%; top:36%; }
+    .b8{ left:0%; top:36%; }
+
+    .tap-btn{
+
+        font-size:15px;
+        bottom:15px;
+        right:15px;
+    }
+
 }
