@@ -680,64 +680,163 @@ body{
     .center-photo,
     .final-photo{
 
-        width:220px;
-        height:300px;
+        width:200px;
+        height:270px;
     }
 
     .content h1{
-        font-size:32px;
+        font-size:30px;
     }
 
     .text-box h2,
     .final-text h2{
-        font-size:28px;
+        font-size:25px;
     }
 
     .text-box p,
     .bottom-text,
     .final-text p{
 
-        font-size:17px;
+        font-size:16px;
     }
 
     .centre-main,
     .family-main{
 
-        width:180px;
-        height:240px;
+        width:160px;
+        height:220px;
+
+        top:42%;
     }
 
     .friend,
     .child{
 
-        width:80px;
-        height:110px;
+        width:70px;
+        height:95px;
+    }
+
+    .f7{
+
+        width:90px !important;
+        height:120px !important;
+
+        top:62%;
+    }
+
+    /* PAGE 3 MOBILE POSITIONS */
+
+    .f1{
+        top:16%;
+        left:20%;
+    }
+
+    .f2{
+        top:16%;
+        right:20%;
+    }
+
+    .f3{
+        top:33%;
+        left:4%;
+    }
+
+    .f4{
+        top:33%;
+        right:4%;
+    }
+
+    .f5{
+        top:52%;
+        left:12%;
+    }
+
+    .f6{
+        top:52%;
+        right:12%;
+    }
+
+    /* PAGE 4 MOBILE POSITIONS */
+
+    .c1{
+        top:16%;
+        left:20%;
+    }
+
+    .c2{
+        top:16%;
+        right:20%;
+    }
+
+    .c3{
+        top:33%;
+        left:4%;
+    }
+
+    .c4{
+        top:33%;
+        right:4%;
+    }
+
+    .c5{
+        top:52%;
+        left:12%;
+    }
+
+    .c6{
+        top:52%;
+        right:12%;
+    }
+
+    .c7{
+        top:66%;
+        left:26%;
+    }
+
+    .c8{
+        top:66%;
+        right:26%;
     }
 
     .heart-balloon{
 
-        width:100px;
-        height:100px;
+        width:85px;
+        height:85px;
     }
 
     .heart-balloon::before,
     .heart-balloon::after{
 
-        width:100px;
-        height:100px;
+        width:85px;
+        height:85px;
     }
 
     .heart-balloon::before{
-        top:-50px;
+        top:-42px;
     }
 
     .heart-balloon::after{
-        left:50px;
+        left:42px;
     }
 
     .heart-balloon img{
 
-        width:68px;
-        height:68px;
+        width:58px;
+        height:58px;
+    }
+
+    .bottom-text{
+
+        font-size:16px;
+
+        bottom:10px;
+
+        width:92%;
+    }
+
+    .tap-btn,
+    .back-btn{
+
+        font-size:15px;
     }
 }
