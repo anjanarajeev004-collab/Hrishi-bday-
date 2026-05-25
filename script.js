@@ -89,10 +89,38 @@ function createBubble(){
 
     const img = document.createElement("img");
 
-    const randomPhoto =
-    Math.floor(Math.random()*30)+1;
+    const photos = [
+    "1.jpg",
+    "2.jpg",
+    "3.jpg",
+    "5.jpg",
+    "6.jpg",
+    "8.jpg",
+    "9.jpg",
+    "11.jpg",
+    "14.jpg",
+    "17.jpg",
+    "18.jpg",
+    "19.jpg",
+    "22.jpg",
+    "23.jpg",
+    "24.jpg",
+    "25.jpg",
+    "26.jpg",
+    "27.jpg",
+    "28.jpg",
+    "29.jpg",
+    "30.jpg"
+];
 
-    img.src = `${randomPhoto}.jpg`;
+const randomPhoto =
+photos[Math.floor(Math.random()*photos.length)];
+
+img.src = randomPhoto;
+
+    img.onerror = () => {
+    img.src = "5.jpg";
+    };
 
     bubble.appendChild(img);
 
@@ -128,3 +156,6 @@ function createBubble(){
 }
 
 setInterval(createBubble,700);
+
+
+
