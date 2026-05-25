@@ -375,172 +375,238 @@ body{
    FINAL PAGE
 ========================= */
 
-.final-photo{
-
-    width:300px;
-    height:390px;
-
-    object-fit:cover;
-
-    border-radius:35px;
-
-    z-index:5;
-
-    margin-bottom:20px;
-}
-
-.final-text{
-
-    max-width:850px;
-
-    z-index:5;
-
-    font-family:'Handlee',cursive;
-}
-
-.final-text h2{
-
-    font-size:40px;
-
-    margin-bottom:15px;
-}
-
-.final-text p{
-
-    font-size:22px;
-
-    line-height:1.8;
-}
-
-/* =========================
-   HEART BALLOONS
-========================= */
-
-.heart-balloon{
-
-    position:absolute;
-
-    width:140px;
-    height:140px;
-
-    background:#ff5c8a;
-
-    transform:rotate(-45deg);
-
+#page5{
+    position:relative;
     overflow:hidden;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    animation:floatBalloon 4s ease-out forwards;
+    background-image:url('finalbg.jpg');
+    background-size:110%;
+    background-position:center 34%;
+    background-repeat:no-repeat;
 }
 
-/* HEART TOP */
+/* reference-style dark background with soft face light */
+#page5::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
 
-.heart-balloon::before,
-.heart-balloon::after{
+    background:
+
+    /* overall dark layer */
+    linear-gradient(
+        rgba(0,0,0,0.76),
+        rgba(0,0,0,0.76)
+    ),
+
+    /* warm light on left face */
+    radial-gradient(
+        circle at 30% 38%,
+        rgba(255,190,140,0.16) 0%,
+        rgba(255,190,140,0.08) 18%,
+        rgba(0,0,0,0.10) 38%,
+        transparent 52%
+    ),
+
+    /* warm light on right face */
+    radial-gradient(
+        circle at 70% 38%,
+        rgba(255,190,140,0.16) 0%,
+        rgba(255,190,140,0.08) 18%,
+        rgba(0,0,0,0.10) 38%,
+        transparent 52%
+    ),
+
+    /* dark cinematic corners */
+    radial-gradient(
+        circle at center,
+        rgba(0,0,0,0.08) 0%,
+        rgba(0,0,0,0.32) 45%,
+        rgba(0,0,0,0.82) 78%,
+        rgba(0,0,0,0.97) 100%
+    );
+
+    backdrop-filter:
+    blur(2px)
+    contrast(1.08)
+    saturate(0.85);
+}
+
+/* SLIGHT GLOW IN CENTRE */
+
+#page5::after{
 
     content:"";
 
     position:absolute;
 
-    width:140px;
-    height:140px;
+    width:520px;
+    height:520px;
 
-    background:#ff5c8a;
+    background:rgba(255,255,255,0.04);
+
+    filter:blur(90px);
 
     border-radius:50%;
+
+    top:18%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:1;
 }
 
-.heart-balloon::before{
+/* CONTENT ABOVE DARK LAYER */
 
-    top:-70px;
-    left:0;
-}
+.final-hearts,
+.final-photo-area,
+.final-text{
 
-.heart-balloon::after{
-
-    left:70px;
-    top:0;
-}
-
-/* PHOTO */
-
-.heart-balloon img{
-
-    width:95px;
-    height:95px;
-
-    object-fit:contain;
-
-    background:black;
-
-    border-radius:15px;
-
-    transform:rotate(45deg);
+    position:relative;
 
     z-index:5;
 }
 
-/* STRING */
+/* PHOTO AREA */
+.final-photo-area{
+    position:relative;
+    width:860px;
+    height:600px;
+    z-index:5;
+    margin-top:-35px;
+}
 
-.heart-balloon span{
-
+.main-photo{
     position:absolute;
+    width:320px;
+    height:320px;
 
-    width:2px;
-    height:75px;
+    top:120px;
+    left:270px;
 
-    background:white;
+    object-fit:cover;
+    object-position:center 20%;
 
-    bottom:-75px;
-    left:70px;
+    border-radius:50%;
+    border:5px solid rgba(255,255,255,0.95);
+    box-shadow:0 0 10px rgba(255,255,255,0.15);
 
-    transform:rotate(45deg);
+    z-index:10;
 }
 
-/* POSITIONS */
+.small-photo{
+    position:absolute;
+    width:120px;
+    height:120px;
 
-.b1{
-    left:3%;
-    top:8%;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center;
+
+    border:4px solid rgba(255,255,255,0.92);
+    box-shadow:0 0 10px rgba(255,255,255,0.15);
+
+    z-index:8;
+    animation:floatPics 4s ease-in-out infinite;
 }
 
-.b2{
-    left:8%;
-    bottom:10%;
+/* moved away from main photo */
+.photo1{ top:-25px; left:370px; }
+.photo2{ top:75px; left:70px; }
+.photo3{ top:75px; right:70px; }
+.photo4{ top:365px; left:85px; }
+.photo5{ top:365px; right:85px; }
+.photo6{ bottom:-35px; left:370px; }
+
+@keyframes floatPics{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-7px); }
 }
 
-.b3{
-    right:3%;
-    top:10%;
+.final-text{
+    position:relative;
+    z-index:5;
+    max-width:930px;
+    margin-top:-30px;
+    text-align:center;
+    color:white;
+    font-family:'Handlee',cursive;
 }
 
-.b4{
-    right:8%;
-    bottom:10%;
+.final-text h2{
+    font-family:'Great Vibes',cursive;
+    font-size:66px;
+    font-weight:400;
+    margin-bottom:12px;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,1),
+    0 0 28px rgba(255,255,255,0.35);
 }
 
-.b5{
-    left:22%;
-    top:2%;
+.final-text p{
+    font-size:21px;
+    line-height:1.55;
+    color:rgba(255,255,255,0.96);
+
+    text-shadow:
+    0 0 8px rgba(0,0,0,1),
+    0 0 18px rgba(0,0,0,0.8);
 }
 
-.b6{
-    right:22%;
-    top:2%;
+/* HEARTS */
+.final-hearts{
+    position:absolute;
+    inset:0;
+    z-index:4;
+    pointer-events:none;
 }
 
-.b7{
-    left:18%;
-    top:42%;
+.h{
+    position:absolute;
+    font-size:13px;
+    opacity:0.78;
+    animation:heartLight 3.5s ease-in-out infinite;
+    text-shadow:
+    0 0 7px currentColor,
+    0 0 16px currentColor;
 }
 
-.b8{
-    right:18%;
-    top:42%;
+@keyframes heartLight{
+    0%,100%{
+        opacity:0.35;
+        transform:scale(0.9);
+    }
+
+    50%{
+        opacity:0.95;
+        transform:scale(1.15);
+    }
 }
+
+/* spaced hearts */
+.h1{ top:6%; left:7%; color:#ff3d5a; }
+.h2{ top:11%; left:19%; color:white; }
+.h3{ top:7%; left:39%; color:#ff3d5a; }
+.h4{ top:9%; right:26%; color:white; }
+.h5{ top:6%; right:9%; color:#ff3d5a; }
+
+.h6{ top:26%; left:6%; color:white; }
+.h7{ top:36%; left:18%; color:#ff3d5a; }
+.h8{ top:33%; right:22%; color:white; }
+.h9{ top:39%; right:7%; color:#ff3d5a; }
+
+.h10{ bottom:31%; left:10%; color:#ff3d5a; }
+.h11{ bottom:25%; left:25%; color:white; }
+.h12{ bottom:26%; right:27%; color:white; }
+.h13{ bottom:22%; right:8%; color:#ff3d5a; }
+
+.h14{ top:20%; left:52%; color:white; font-size:10px; }
+.h15{ top:51%; left:42%; color:#ff3d5a; font-size:10px; }
+.h16{ bottom:37%; right:41%; color:white; font-size:10px; }
 
 /* =========================
    TAP BUTTON
@@ -670,173 +736,5 @@ body{
     }
 }
 
-/* =========================
-   MOBILE
-========================= */
+    
 
-@media(max-width:768px){
-
-    .main-img,
-    .center-photo,
-    .final-photo{
-
-        width:200px;
-        height:270px;
-    }
-
-    .content h1{
-        font-size:30px;
-    }
-
-    .text-box h2,
-    .final-text h2{
-        font-size:25px;
-    }
-
-    .text-box p,
-    .bottom-text,
-    .final-text p{
-
-        font-size:16px;
-    }
-
-    .centre-main,
-    .family-main{
-
-        width:160px;
-        height:220px;
-
-        top:42%;
-    }
-
-    .friend,
-    .child{
-
-        width:70px;
-        height:95px;
-    }
-
-    .f7{
-
-        width:90px !important;
-        height:120px !important;
-
-        top:62%;
-    }
-
-    /* PAGE 3 MOBILE POSITIONS */
-
-    .f1{
-        top:16%;
-        left:20%;
-    }
-
-    .f2{
-        top:16%;
-        right:20%;
-    }
-
-    .f3{
-        top:33%;
-        left:4%;
-    }
-
-    .f4{
-        top:33%;
-        right:4%;
-    }
-
-    .f5{
-        top:52%;
-        left:12%;
-    }
-
-    .f6{
-        top:52%;
-        right:12%;
-    }
-
-    /* PAGE 4 MOBILE POSITIONS */
-
-    .c1{
-        top:16%;
-        left:20%;
-    }
-
-    .c2{
-        top:16%;
-        right:20%;
-    }
-
-    .c3{
-        top:33%;
-        left:4%;
-    }
-
-    .c4{
-        top:33%;
-        right:4%;
-    }
-
-    .c5{
-        top:52%;
-        left:12%;
-    }
-
-    .c6{
-        top:52%;
-        right:12%;
-    }
-
-    .c7{
-        top:66%;
-        left:26%;
-    }
-
-    .c8{
-        top:66%;
-        right:26%;
-    }
-
-    .heart-balloon{
-
-        width:85px;
-        height:85px;
-    }
-
-    .heart-balloon::before,
-    .heart-balloon::after{
-
-        width:85px;
-        height:85px;
-    }
-
-    .heart-balloon::before{
-        top:-42px;
-    }
-
-    .heart-balloon::after{
-        left:42px;
-    }
-
-    .heart-balloon img{
-
-        width:58px;
-        height:58px;
-    }
-
-    .bottom-text{
-
-        font-size:16px;
-
-        bottom:10px;
-
-        width:92%;
-    }
-
-    .tap-btn,
-    .back-btn{
-
-        font-size:15px;
-    }
-}
