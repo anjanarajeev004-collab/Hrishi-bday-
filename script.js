@@ -3,7 +3,6 @@ const pages = document.querySelectorAll(".page");
 let currentPage = 0;
 
 /* PASSWORD */
-
 function checkPassword(){
 
     const pass =
@@ -11,7 +10,10 @@ function checkPassword(){
 
     if(pass === "kallakannan"){
 
-        document.getElementById("bgMusic").play();
+        const music =
+        document.getElementById("bgMusic");
+
+        music.play().catch(()=>{});
 
         showPage(1);
 
@@ -156,6 +158,23 @@ img.src = randomPhoto;
 }
 
 setInterval(createBubble,700);
+/* PLAY VOICE ON FIRST PAGE */
+
+window.addEventListener("load", () => {
+
+    const voice =
+    document.getElementById("voiceMessage");
+
+    voice.play().catch(() => {
+
+        document.addEventListener("click", () => {
+            voice.play();
+        }, { once:true });
+
+    });
+
+});
+
 
 
 
