@@ -158,8 +158,8 @@ img.src = randomPhoto;
 }
 
 setInterval(createBubble,700);
-/* PLAY VOICE ON FIRST PAGE */
 
+/* PLAY VOICE ON FIRST PAGE */
 window.addEventListener("load", () => {
 
     const voice =
